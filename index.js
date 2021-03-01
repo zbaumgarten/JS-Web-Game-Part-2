@@ -17,7 +17,7 @@ function makeItem(url, left, bottom){
     })
 }
 
-function createInventory(){
+function makeInventory(){
     let inventory = document.createElement('div')
     inventory.style.position = 'fixed'
     inventory.style.bottom = '0px';
@@ -39,7 +39,7 @@ function addItemToInventory(url){
     inventory.append(inventoryItem)
 }
 
-createInventory()
+makeInventory()
 makeObject('assets/green-character.gif', 100, 250)
 makeObject('assets/tree.png', 200, 450)
 makeObject('assets/pillar.png', 350, 250)
