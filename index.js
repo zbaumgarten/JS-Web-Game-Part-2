@@ -28,12 +28,6 @@ function makeInventory(){
     document.body.append(inventory)
 }
 
-function addItemToInventory(url){
-    let inventoryItem = document.createElement('img')
-    inventoryItem.src = url
-    inventory.append(inventoryItem)
-}
-
 makeInventory()
 makeObject('assets/green-character.gif', 100, 250)
 makeObject('assets/tree.png', 200, 450)
