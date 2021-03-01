@@ -9,7 +9,7 @@ function makeObject(url, left, bottom){
 }
 
 function makeItem(url, left, bottom){
-    let object = makeObject(url, left, bottom)
+    let item = makeObject(url, left, bottom)
 }
 
 function makeInventory(){
