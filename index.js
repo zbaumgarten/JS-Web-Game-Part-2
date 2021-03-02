@@ -1,4 +1,4 @@
-function makeObject(url, left, bottom){
+function makeObject(url, left, bottom) {
     let object = document.createElement('img')
     object.src = url
     object.style.position = 'fixed'
@@ -8,12 +8,19 @@ function makeObject(url, left, bottom){
     return object
 }
 
-function makeItem(url, left, bottom){
+function makeItem(url, left, bottom) {
     let item = makeObject(url, left, bottom)
+    item.addEventListener('click', function () {
+        item.remove()
+        let inventoryItem = document.createElement('img')
+        inventoryItem.src = url
+        inventory.append(inventoryItem)
+    })
 }
 
-function makeInventory(){
-    let inventory = document.createElement('div')
+let inventory = document.createElement('div')
+
+function makeInventory() {
     inventory.style.position = 'fixed'
     inventory.style.bottom = '0px';
     inventory.style.left = '0px'
