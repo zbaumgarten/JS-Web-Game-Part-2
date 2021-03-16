@@ -1,4 +1,4 @@
-function makeObject(url, left, bottom) {
+function newImage(url, left, bottom){
     let object = document.createElement('img')
     object.src = url
     object.style.position = 'fixed'
@@ -8,7 +8,7 @@ function makeObject(url, left, bottom) {
     return object
 }
 
-function makeItem(url, left, bottom) {
+function newItem(url, left, bottom) {
     let item = makeObject(url, left, bottom)
     item.addEventListener('click', function () {
         item.remove()
@@ -20,7 +20,7 @@ function makeItem(url, left, bottom) {
 
 let inventory = document.createElement('div')
 
-function makeInventory() {
+function newInventory() {
     inventory.style.position = 'fixed'
     inventory.style.bottom = '0px';
     inventory.style.left = '0px'
@@ -35,14 +35,14 @@ function makeInventory() {
     document.body.append(inventory)
 }
 
-makeInventory()
-makeObject('assets/green-character.gif', 100, 250)
-makeObject('assets/tree.png', 200, 450)
-makeObject('assets/pillar.png', 350, 250)
-makeObject('assets/pine-tree.png', 450, 350)
-makeObject('assets/crate.png', 150, 350)
-makeObject('assets/well.png', 500, 575)
+newInventory()
+newImage('assets/green-character.gif', 100, 250)
+newImage('assets/tree.png', 200, 450)
+newImage('assets/pillar.png', 350, 250)
+newImage('assets/pine-tree.png', 450, 350)
+newImage('assets/crate.png', 150, 350)
+newImage('assets/well.png', 500, 575)
 
-makeItem('assets/sword.png', 500, 555)
-makeItem('assets/shield.png', 165, 335)
-makeItem('assets/staff.png', 600, 250)
+newItem('assets/sword.png', 500, 555)
+newItem('assets/shield.png', 165, 335)
+newItem('assets/staff.png', 600, 250)
