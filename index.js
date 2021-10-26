@@ -9,7 +9,7 @@ function newImage(url, left, bottom){
 }
 
 function newItem(url, left, bottom) {
-    let item = makeObject(url, left, bottom)
+    let item = newImage(url, left, bottom)
     item.addEventListener('click', function () {
         item.remove()
         let inventoryItem = document.createElement('img')
